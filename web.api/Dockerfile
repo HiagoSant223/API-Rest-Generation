@@ -2,7 +2,7 @@ FROM ubuntu:latest AS build
 
 RUN apt-get updates
 RUN apt-get install openjdk-17-jdk -y
-COPY main Dockerfile
+COPY src/main Dockerfile
 
 RUN apt-get install maven -y
 RUN mvn clean install
